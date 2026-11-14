@@ -28,7 +28,7 @@ public class playerControls : MonoBehaviour
 
         if ((Input.GetKeyDown(KeyCode.W) && isGrounded))
         {
-            rb.AddForce(Vector2.up * jumpforce, ForceMode2D.Impulse);
+            rb.AddForce(new Vector2(0, jumpforce), ForceMode2D.Impulse);
             if (Input.GetKeyDown(KeyCode.W)) Debug.Log("W pressed, grounded: " + isGrounded);
             isGrounded = false;
         }

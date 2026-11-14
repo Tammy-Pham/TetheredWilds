@@ -21,6 +21,7 @@ public class EnemyHitBox : MonoBehaviour
 
         }
     }
+    //this is an on trigger of what happends when you pass through the enemy
     private void OnTriggerEnter(Collider other)
     {
         EnemyHealth enemy = other.GetComponent<EnemyHealth>();
