@@ -56,7 +56,7 @@ public class playerControls : MonoBehaviour
         if (!isdashing)
         {
             rb.linearVelocity = new Vector2(moveInput * movespeed, rb.linearVelocity.y);
-            Debug.Log(rb.linearVelocity);
+            //Debug.Log(rb.linearVelocity);
         }
     }
 
