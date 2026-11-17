@@ -33,7 +33,7 @@ public class playerHealth : MonoBehaviour
     {
         sprite.color = Color.red;
         yield return new WaitForSeconds(1);
-        sprite.color = Color.orange;
+        sprite.color = Color.blue;
     }
 
 }
