@@ -366,7 +366,7 @@ GameObject:
   - component: {fileID: 169647506}
   - component: {fileID: 169647510}
   - component: {fileID: 169647511}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: Enemy (7)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -463,6 +463,7 @@ MonoBehaviour:
   - {fileID: 405390171}
   - {fileID: 995640145}
   - {fileID: 1334005939}
+  Direction: {x: 0, y: 0}
   speed: 2
 --- !u!114 &169647507
 MonoBehaviour:
@@ -508,6 +509,10 @@ MonoBehaviour:
   enemy: {fileID: 169647505}
   player: {fileID: 229973412}
   cooldownTime: 1
+  PlayerLayer:
+    serializedVersion: 2
+    m_Bits: 128
+  move: {fileID: 0}
 --- !u!61 &169647510
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -644,7 +649,7 @@ Camera:
   far clip plane: 5000
   field of view: 40
   orthographic: 1
-  orthographic size: 5
+  orthographic size: 12
   m_Depth: -1
   m_CullingMask:
     serializedVersion: 2
@@ -669,7 +674,7 @@ Transform:
   m_GameObject: {fileID: 221355440}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -13.809999, y: -1.1800001, z: -10}
+  m_LocalPosition: {x: -12.9, y: -1.1, z: -10}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -767,7 +772,7 @@ GameObject:
   - component: {fileID: 229973416}
   - component: {fileID: 229973415}
   - component: {fileID: 229973418}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: Player
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -859,7 +864,7 @@ Transform:
   m_GameObject: {fileID: 229973409}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -16.81, y: -0.18, z: 0}
+  m_LocalPosition: {x: -17.9, y: -0.1, z: 0}
   m_LocalScale: {x: 2, y: 2, z: 2}
   m_ConstrainProportionsScale: 1
   m_Children: []
@@ -935,16 +940,10 @@ MonoBehaviour:
   enemyhealth: {fileID: 603396164}
   attackRange: 1.5
   player: {fileID: 229973412}
-  enemy: {fileID: 603396161}
-  enemy1: {fileID: 787944763}
-  enemy3: {fileID: 815081841}
-  enemy4: {fileID: 921136479}
-  enemy5: {fileID: 654536825}
-  enemy6: {fileID: 1226669120}
-  enemy7: {fileID: 835118666}
-  enemy8: {fileID: 328228008}
-  enemy9: {fileID: 169647505}
   cooldownTime: 1
+  enemyLayer:
+    serializedVersion: 2
+    m_Bits: 64
 --- !u!60 &229973418
 PolygonCollider2D:
   m_ObjectHideFlags: 0
@@ -1319,7 +1318,7 @@ GameObject:
   - component: {fileID: 328228009}
   - component: {fileID: 328228013}
   - component: {fileID: 328228014}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: Enemy (9)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1418,6 +1417,7 @@ MonoBehaviour:
   - {fileID: 2071914870}
   - {fileID: 990169606}
   - {fileID: 718533501}
+  Direction: {x: 0, y: 0}
   speed: 2
 --- !u!114 &328228010
 MonoBehaviour:
@@ -1463,6 +1463,10 @@ MonoBehaviour:
   enemy: {fileID: 328228008}
   player: {fileID: 229973412}
   cooldownTime: 1
+  PlayerLayer:
+    serializedVersion: 2
+    m_Bits: 128
+  move: {fileID: 0}
 --- !u!61 &328228013
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -2824,7 +2828,7 @@ GameObject:
   - component: {fileID: 603396162}
   - component: {fileID: 603396166}
   - component: {fileID: 603396167}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: Enemy
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -2921,6 +2925,7 @@ MonoBehaviour:
   - {fileID: 1567343331}
   - {fileID: 616214878}
   - {fileID: 1245991944}
+  Direction: {x: 0, y: 0}
   speed: 2
 --- !u!114 &603396163
 MonoBehaviour:
@@ -2966,6 +2971,10 @@ MonoBehaviour:
   enemy: {fileID: 603396161}
   player: {fileID: 229973412}
   cooldownTime: 2
+  PlayerLayer:
+    serializedVersion: 2
+    m_Bits: 128
+  move: {fileID: 0}
 --- !u!61 &603396166
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -3000,7 +3009,7 @@ BoxCollider2D:
   m_UsedByEffector: 0
   m_CompositeOperation: 0
   m_CompositeOrder: 0
-  m_Offset: {x: 0.007045746, y: 0.011070728}
+  m_Offset: {x: -0.0073394775, y: 0.0014796257}
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0.5, y: 0.5}
@@ -3010,7 +3019,7 @@ BoxCollider2D:
     drawMode: 0
     adaptiveTiling: 0
   m_AutoTiling: 0
-  m_Size: {x: 1.2314682, y: 1.2435465}
+  m_Size: {x: 1.0140762, y: 1.0037756}
   m_EdgeRadius: 0
 --- !u!50 &603396167
 Rigidbody2D:
@@ -3149,7 +3158,7 @@ SpriteRenderer:
   m_GlobalIlluminationMeshLod: 0
   m_SortingLayerID: 0
   m_SortingLayer: 0
-  m_SortingOrder: 0
+  m_SortingOrder: -10
   m_MaskInteraction: 0
   m_Sprite: {fileID: 7482667652216324306, guid: 311925a002f4447b3a28927169b83ea6, type: 3}
   m_Color: {r: 0.5849056, g: 0.5849056, b: 0.5849056, a: 1}
@@ -3453,7 +3462,7 @@ GameObject:
   - component: {fileID: 654536826}
   - component: {fileID: 654536830}
   - component: {fileID: 654536831}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: Enemy (5)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -3550,6 +3559,7 @@ MonoBehaviour:
   - {fileID: 309989986}
   - {fileID: 881180262}
   - {fileID: 54096620}
+  Direction: {x: 0, y: 0}
   speed: 2
 --- !u!114 &654536827
 MonoBehaviour:
@@ -3595,6 +3605,10 @@ MonoBehaviour:
   enemy: {fileID: 654536825}
   player: {fileID: 229973412}
   cooldownTime: 2
+  PlayerLayer:
+    serializedVersion: 2
+    m_Bits: 128
+  move: {fileID: 0}
 --- !u!61 &654536830
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -4160,7 +4174,7 @@ GameObject:
   - component: {fileID: 787944764}
   - component: {fileID: 787944768}
   - component: {fileID: 787944769}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: Enemy (1)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -4257,6 +4271,7 @@ MonoBehaviour:
   - {fileID: 1689171385}
   - {fileID: 942946013}
   - {fileID: 79013734}
+  Direction: {x: 0, y: 0}
   speed: 2
 --- !u!114 &787944765
 MonoBehaviour:
@@ -4302,6 +4317,10 @@ MonoBehaviour:
   enemy: {fileID: 787944763}
   player: {fileID: 229973412}
   cooldownTime: 2
+  PlayerLayer:
+    serializedVersion: 2
+    m_Bits: 128
+  move: {fileID: 0}
 --- !u!61 &787944768
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -4391,7 +4410,7 @@ GameObject:
   - component: {fileID: 815081842}
   - component: {fileID: 815081846}
   - component: {fileID: 815081847}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: Enemy (3)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -4488,6 +4507,7 @@ MonoBehaviour:
   - {fileID: 1297907489}
   - {fileID: 1157086586}
   - {fileID: 1669834061}
+  Direction: {x: 0, y: 0}
   speed: 2
 --- !u!114 &815081843
 MonoBehaviour:
@@ -4533,6 +4553,10 @@ MonoBehaviour:
   enemy: {fileID: 815081841}
   player: {fileID: 229973412}
   cooldownTime: 2
+  PlayerLayer:
+    serializedVersion: 2
+    m_Bits: 128
+  move: {fileID: 0}
 --- !u!61 &815081846
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -4701,7 +4725,7 @@ GameObject:
   - component: {fileID: 835118667}
   - component: {fileID: 835118671}
   - component: {fileID: 835118672}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: Enemy (8)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -4798,6 +4822,7 @@ MonoBehaviour:
   - {fileID: 2015537015}
   - {fileID: 1595314990}
   - {fileID: 680842799}
+  Direction: {x: 0, y: 0}
   speed: 2
 --- !u!114 &835118668
 MonoBehaviour:
@@ -4843,6 +4868,10 @@ MonoBehaviour:
   enemy: {fileID: 835118666}
   player: {fileID: 229973412}
   cooldownTime: 2
+  PlayerLayer:
+    serializedVersion: 2
+    m_Bits: 128
+  move: {fileID: 0}
 --- !u!61 &835118671
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -5192,7 +5221,7 @@ GameObject:
   - component: {fileID: 921136480}
   - component: {fileID: 921136484}
   - component: {fileID: 921136485}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: Enemy (4)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -5289,6 +5318,7 @@ MonoBehaviour:
   - {fileID: 32685863}
   - {fileID: 589116801}
   - {fileID: 1800867133}
+  Direction: {x: 0, y: 0}
   speed: 2
 --- !u!114 &921136481
 MonoBehaviour:
@@ -5334,6 +5364,10 @@ MonoBehaviour:
   enemy: {fileID: 921136479}
   player: {fileID: 229973412}
   cooldownTime: 2
+  PlayerLayer:
+    serializedVersion: 2
+    m_Bits: 128
+  move: {fileID: 0}
 --- !u!61 &921136484
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -6268,7 +6302,7 @@ GameObject:
   - component: {fileID: 1226669121}
   - component: {fileID: 1226669125}
   - component: {fileID: 1226669126}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: Enemy (6)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -6364,6 +6398,7 @@ MonoBehaviour:
   waypoints:
   - {fileID: 340936021}
   - {fileID: 1670621389}
+  Direction: {x: 0, y: 0}
   speed: 2
 --- !u!114 &1226669122
 MonoBehaviour:
@@ -6409,6 +6444,10 @@ MonoBehaviour:
   enemy: {fileID: 1226669120}
   player: {fileID: 229973412}
   cooldownTime: 2
+  PlayerLayer:
+    serializedVersion: 2
+    m_Bits: 128
+  move: {fileID: 0}
 --- !u!61 &1226669125
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -8070,7 +8109,7 @@ Transform:
   m_GameObject: {fileID: 1713856262}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -13.809999, y: -1.1800001, z: -10}
+  m_LocalPosition: {x: -12.9, y: -1.1, z: -10}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -8094,7 +8133,7 @@ MonoBehaviour:
     AngularDampingMode: 0
     RotationDamping: {x: 1, y: 1, z: 1}
     QuaternionDamping: 1
-  FollowOffset: {x: 3, y: -1, z: -10}
+  FollowOffset: {x: 5, y: -1, z: -10}
 --- !u!114 &1713856265
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -8120,7 +8159,7 @@ MonoBehaviour:
     CustomLookAtTarget: 0
   Lens:
     FieldOfView: 40
-    OrthographicSize: 5
+    OrthographicSize: 12
     NearClipPlane: 0.1
     FarClipPlane: 5000
     Dutch: 0
@@ -8308,11 +8347,11 @@ RectTransform:
   m_Children: []
   m_Father: {fileID: 465094009}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
-  m_AnchorMin: {x: 0, y: 1}
-  m_AnchorMax: {x: 0, y: 1}
-  m_AnchoredPosition: {x: 0, y: 0}
-  m_SizeDelta: {x: 200, y: 50}
-  m_Pivot: {x: 0, y: 1}
+  m_AnchorMin: {x: 0.43554163, y: 0.6916667}
+  m_AnchorMax: {x: 0.43554163, y: 0.6916667}
+  m_AnchoredPosition: {x: -9.5, y: 4}
+  m_SizeDelta: {x: 201, y: 50}
+  m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1743611489
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -8360,8 +8399,8 @@ MonoBehaviour:
   m_faceColor:
     serializedVersion: 2
     rgba: 4294967295
-  m_fontSize: 45
-  m_fontSizeBase: 45
+  m_fontSize: 25
+  m_fontSizeBase: 25
   m_fontWeight: 400
   m_enableAutoSizing: 0
   m_fontSizeMin: 18
@@ -8399,7 +8438,7 @@ MonoBehaviour:
   m_VertexBufferAutoSizeReduction: 0
   m_useMaxVisibleDescender: 1
   m_pageToDisplay: 1
-  m_margin: {x: 0, y: 0, z: 0, w: 0}
+  m_margin: {x: 3.2055664, y: 0, z: 0, w: 0}
   m_isUsingLegacyAnimationComponent: 0
   m_isVolumetricText: 0
   m_hasFontAssetChanged: 0

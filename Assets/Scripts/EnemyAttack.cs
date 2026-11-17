@@ -9,10 +9,12 @@ public class EnemyAttack : MonoBehaviour
     public Transform player;
     private float nextAttackTime;
     [SerializeField] private float cooldownTime = 1.0f;
+    [SerializeField] private LayerMask PlayerLayer;
+    [SerializeField] EnemyMovement move;
 
     private void Start()
     {
-
+        move = GetComponent<EnemyMovement>();
 
     }
     //what the player can press to attack
@@ -22,14 +24,21 @@ public class EnemyAttack : MonoBehaviour
 
     private void Update()
     {
-        float distance = Vector2.Distance(enemy.position, player.position);
         if (Time.time >= nextAttackTime)
         {
-            if (playerhealth != null && distance <= attackRange)
-            {
-                playerhealth.TakeDamage(1);
+                Debug.Log("atk");
+                RaycastHit2D hit = Physics2D.BoxCast(transform.position, Vector3.one * 0.5f, 0, transform.right * move.Direction.x, 1.1f, PlayerLayer);
+            Debug.DrawLine(transform.position, transform.position + transform.right * move.Direction.x);
+                if (hit != null)
+                {
+                    Debug.Log("Hit box " + hit.transform.gameObject.name);
+                    if (hit.transform.TryGetComponent<playerHealth>(out playerHealth player))
+                    {
+                        Debug.Log("Hit player");
+                        player.TakeDamage(1);
+                    }
+                }
                 nextAttackTime = Time.time + cooldownTime;
-            }
         }
     }
 

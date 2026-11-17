@@ -4,6 +4,7 @@ using UnityEngine;
 public class EnemyMovement : MonoBehaviour
 {
     public Transform[] waypoints;
+    public Vector2 Direction;
     public float speed;
     private int currentPointIndex = 0;
     private Rigidbody2D rb;
@@ -15,8 +16,8 @@ public class EnemyMovement : MonoBehaviour
 
     private void FixedUpdate()
     {
-        Vector2 direction = waypoints[currentPointIndex].position - transform.position;
-        rb.linearVelocity =direction.normalized * speed;
+        Direction = waypoints[currentPointIndex].position - transform.position;
+        rb.linearVelocity =Direction.normalized * speed;
 
         if(Vector2.Distance(transform.position, waypoints[currentPointIndex].position) < 0.1f)
         {
