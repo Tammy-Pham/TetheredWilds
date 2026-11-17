@@ -16,7 +16,7 @@ public class EnemyHitBox : MonoBehaviour
     {
         if(polygonCollider != null)
         {
-            Gizmos.color = Color.red;
+            Gizmos.color = Color.blue;
             Gizmos.DrawWireCube(polygonCollider.bounds.center, polygonCollider.bounds.size);
 
         }
