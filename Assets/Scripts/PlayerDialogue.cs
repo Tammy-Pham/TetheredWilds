@@ -4,6 +4,8 @@ public class PlayerDialogue : MonoBehaviour
 {
     [SerializeField] float talkDistance = 2;
     bool inConversation;
+    bool isFrozen = false;
+    public Rigidbody2D rb;
 
     private void Update()
     {
@@ -57,4 +59,13 @@ public class PlayerDialogue : MonoBehaviour
         dialogueDisplay.OnDialogueEnded -= LeaveCoversation;
     }
 
+    private void OnTriggerEnter2D(Collider2D collision)
+    {
+        NPCDialgoue dialogue = collision.GetComponent<NPCDialgoue>();
+
+        if(dialogue != null)
+        {
+            Interact();
+        }
+    }
 }

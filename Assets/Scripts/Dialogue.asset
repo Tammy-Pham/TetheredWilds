@@ -13,5 +13,6 @@ MonoBehaviour:
   m_Name: Dialogue
   m_EditorClassIdentifier: Assembly-CSharp::DialogueAsset
   dialogue:
-  - Hello!
-  - how are you doing?
+  - 
+  - Alright, another sucessful scrap mission. I should head back before sunset.
+  - Crap, a surveilance drone, Gotta take it out before it sees me
